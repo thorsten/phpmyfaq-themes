@@ -1,0 +1,225 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>phpMyFAQ Perdita -  powered by phpMyFAQ 2.8.0-dev</title>
+    <base href="#" />
+
+    <meta name="description" content="phpMyFAQ should be the answer for all questions in life">
+    <meta name="author" content="Thorsten Rinne">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+    <meta name="application-name" content="phpMyFAQ 2.8.0-dev">
+    <meta name="copyright" content="(c) 2001-2012 phpMyFAQ Team">
+    <meta name="publisher" content="Thorsten Rinne">
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="revisit-after" content="7 days">
+    <meta name="MSSmartTagsPreventParsing" content="true">
+
+    <!-- Share on Facebook -->
+    <meta property="og:title" content="phpMyFAQ Perdita -  powered by phpMyFAQ 2.8.0-dev" />
+    <meta property="og:description" content="phpMyFAQ should be the answer for all questions in life" />
+    <meta property="og:image" content="" />
+    <link rel="stylesheet" href="template/default/css/style.css?v=1">
+    <script src="inc/js/modernizr.min.js"></script>
+    <script src="inc/js/jquery.min.js"></script>
+    <script src="inc/js/functions.js"></script>
+
+    <script src="inc/js/phpmyfaq.js"></script>
+    <link rel="shortcut icon" href="template/default/favicon.ico">
+    <link rel="apple-touch-icon" href="template/default/apple-touch-icon.png">
+
+    <link rel="alternate" title="News RSS Feed" type="application/rss+xml" href="feed/news/rss.php">
+    <link rel="alternate" title="TopTen RSS Feed" type="application/rss+xml" href="feed/topten/rss.php">
+    <link rel="alternate" title="Latest FAQ Records RSS Feed" type="application/rss+xml" href="feed/latest/rss.php">
+    <link rel="alternate" title="Open Questions RSS Feed" type="application/rss+xml" href="feed/openquestions/rss.php">
+    <link rel="search" type="application/opensearchdescription+xml" title="phpMyFAQ Perdita" href="#">
+
+</head>
+<body dir="ltr">
+<!--[if lt IE 8 ]>
+<div class="internet-explorer-error">
+    Do you know that your Internet Explorer is out of date?<br/>
+    Please use Internet Explorer 8+, Mozilla Firefox 4+, Google Chrome, Apple Safari 5+ or Opera 11+
+</div>
+<![endif]-->
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
+            <a class="brand" title="phpMyFAQ Perdita" href="#">phpMyFAQ Perdita</a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li><a href="#">Add FAQ</a></li>
+                    <li><a href="#">Add question</a></li>
+                    <li><a href="#">Open questions</a></li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li><a href="#">Administration</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+
+</div>
+<div id="main">
+    <div class="container">
+        <div class="row">
+            <div class="span3">
+                <menu class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="home"><a href="index.php?">FAQ Home</a></li>
+                        <li><a href="index.php?action=show">All categories</a></li>
+                        <li class="divider-horizontal"></li>
+                        <li><a id="category_1" title="Test in Englisch" href="#">Test</a></li>
+                        <li><a id="category_2" title="English translation" href="#">Network</a></li>
+                        <li><a id="category_9" href="#">Hello</a></li>
+                    </ul>
+                </menu>
+                0 users online | 0 Guests and 0 Registered
+            </div>
+
+            <div class="span6">
+
+
+                <div id="searchBox">
+                    <form id="instantform" action="?action=instantresponse" method="post">
+                        <input type="hidden" name="ajaxlanguage" id="ajaxlanguage" value="en" />
+                        <input type="search" name="search" id="instantfield" value=""
+                               placeholder="Just type and find the answers ..." onfocus="autoSuggest(); return false;" />
+                    </form>
+                    <a class="help" href="#">Advanced search</a>
+                </div>
+
+                <!-- Instant Response -->
+                <div id="instantresponse"> </div>
+
+                <!-- News -->
+                <section>
+                    <header>
+                        <h2>phpMyFAQ Perdita FAQ News &nbsp;<a href="#" target="_blank"><img id="newsRSS" src="images/feed.png" width="16" height="16" alt="RSS" /></a></h2>
+                    </header>
+
+                    <article>
+                        <header><h3><a name="news_2" href="#">Hallo, Welt! <img class="goNews" src="images/more.gif" width="11" height="11" alt="Hallo, Welt!" /></a></h3></header><p>Hallo, Thorsten</p>
+                        <div class="date">16.10.2010 15:04</div>
+                    </article>
+                    <p><a href="?newsid=0">Show archived news.</a></p>
+                    <p align="center">There are 6 FAQs online</p>
+
+                </section>
+            </div>
+            <div class="span3">
+
+                <section>
+                    <header>
+                        <h3>Most popular FAQs <a href="#" target="_blank"><img src="images/feed.png" width="16" height="16" alt="RSS" /></a></h3>
+                    </header>
+                    <ol>
+                        <li><a href="#">Test with Twitter</a> (3 views)</li>
+                        <li><a href="#">Test with Twitter!</a> (1 view)</li>
+                        <li><a href="#">Test with Twitter!</a> (1 view)</li>
+                    </ol>
+                </section>
+                <section>
+                    <header>
+                        <h3>Latest FAQs <a href="#" target="_blank"><img src="images/feed.png" width="16" height="16" alt="RSS" /></a></h3>
+                    </header>
+                    <ol>
+                        <li><a href="#">Test with Twitter!</a> (25.03.2011 18:14)</li>
+                        <li><a href="#">Test with Twitter!</a> (25.03.2011 18:13)</li>
+                        <li><a href="#">Test with Twitter</a> (25.03.2011 18:11)</li>
+                    </ol>
+                </section>
+                <section>
+                    <header>
+
+                        <h3>Sticky FAQs</h3>
+                    </header>
+                    <ul>
+                        <li><a href="#">Test with Twitter</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="span6">
+                <ul class="footer-menu">
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="span6">
+                <form action="?sid=" method="post" class="pull-right">
+                    <select class="language" name="language" id="language" size="1" onchange="this.form.submit();">
+                        <option value="ar">Arabic</option>
+                        <option value="eu">Basque</option>
+                        <option value="bn">Bengali</option>
+                        <option value="pt-br">Brazilian Portuguese</option>
+                        <option value="zh">Chinese (Simplified)</option>
+                        <option value="tw">Chinese (Traditional)</option>
+                        <option value="cs">Czech</option>
+                        <option value="da">Danish</option>
+                        <option value="nl">Dutch</option>
+                        <option value="en" selected="selected">English</option>
+                        <option value="fi">Finnish</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="el">Greek</option>
+                        <option value="he">Hebrew</option>
+                        <option value="hi">Hindi</option>
+                        <option value="hu">Hungarian</option>
+                        <option value="id">Indonesian</option>
+                        <option value="it">Italian</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="lv">Latvian</option>
+                        <option value="lt">Lithuanian</option>
+                        <option value="ms">Malay</option>
+                        <option value="nb">Norwegian Bokm&aring;l</option>
+                        <option value="fa">Persian</option>
+                        <option value="pl">Polish</option>
+                        <option value="pt">Portuguese</option>
+                        <option value="ro">Romanian</option>
+                        <option value="ru">Russian</option>
+                        <option value="sr">Serbian</option>
+                        <option value="sk">Slovak</option>
+                        <option value="sl">Slovenian</option>
+                        <option value="es">Spanish</option>
+                        <option value="sv">Swedish</option>
+                        <option value="th">Thai</option>
+                        <option value="tr">Turkish</option>
+                        <option value="uk">Ukrainian</option>
+                        <option value="vi">Vietnamese</option>
+                        <option value="cy">Welsh</option>
+                    </select>
+                    <input type="hidden" name="action" value="" />
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <p class="copyright pull-right">
+                powered by <a href="http://www.phpmyfaq.de" target="_blank">phpMyFAQ</a> 2.8.0-dev
+            </p>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

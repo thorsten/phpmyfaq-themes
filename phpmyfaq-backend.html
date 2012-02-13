@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>phpMyFAQ Perdita - powered by phpMyFAQ 2.8.0-dev</title>
+    <base href="#" />
+
+    <meta name="description" content="Only Chuck Norris can divide by zero.">
+    <meta name="author" content="phpMyFAQ Team">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+    <meta name="application-name" content="phpMyFAQ 2.8.0-dev">
+    <meta name="copyright" content="(c) 2001-2012 phpMyFAQ Team">
+    <meta name="publisher" content="phpMyFAQ Team">
+    <meta name="MSSmartTagsPreventParsing" content="true">
+
+    <link rel="stylesheet" href="css/style.css?v=1">
+
+    <script src="../inc/js/modernizr.min.js"></script>
+    <script src="../inc/js/jquery.min.js"></script>
+    <script src="../inc/js/functions.js"></script>
+    <script src="../inc/js/phpmyfaq.js"></script
+
+    <link rel="shortcut icon" href="../template/default/favicon.ico">
+    <link rel="apple-touch-icon" href="../template/default/apple-touch-icon.png">
+</head>
+<body dir="ltr">
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="../index.php">phpMyFAQ Perdita</a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li class="active">
+                        <a href="index.php">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="index.php?action=user">Users</a>
+                    </li>
+                    <li>
+                        <a href="index.php?action=content">Content</a>
+
+                    </li>
+                    <li>
+                        <a href="index.php?action=statistics">Statistics</a>
+                    </li>
+                    <li>
+                        <a href="index.php?action=export">Exports</a>
+                    </li>
+                    <li>
+
+                        <a href="index.php?action=backup">Backup</a>
+                    </li>
+                    <li>
+                        <a href="index.php?action=config">Configuration</a>
+                    </li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li class="divider-vertical"></li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <span title="Logged in as admin">
+                            Thorsten!
+                            </span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+
+                                Session expires in: <span id="sessioncounter">Loading...</span>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="index.php?action=logout">Logout</a>
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="main">
+    <div class="container">
+        <div class="row">
+
+            <div class="span3">
+                <menu class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Dashboard</li>
+                        <li><a href="?action=category">Categories</a></li>
+                        <li><a href="?action=editentry">Add new FAQ record</a></li>
+                        <li><a href="?action=view">Edit FAQs</a></li>
+                        <li><a href="?action=question">Open questions</a></li>
+
+                        <li class="nav-header">Admin worklog</li>
+                        <li><span id="saving_data_indicator"></span></li>
+                        <li class="nav-header">Found an issue?</li>
+                        <li><a href="https://github.com/thorsten/phpMyFAQ/issues/" target="_blank">Please report it here</a></li>
+                    </ul>
+                </menu>
+            </div>
+
+
+            <div class="span9">
+                <header>
+                    <h2>phpMyFAQ Information</h2>
+                </header>
+                <table class="list" style="width: 300px;">
+                    <tbody>
+                    <tr>
+                        <td><strong><a href="?action=viewsessions">Visits</a></strong></td>
+
+                        <td>422</td>
+                    </tr>
+                    <tr>
+                        <td><strong><a href="?action=view">Articles</a></strong></td>
+                        <td>65</td>
+                    </tr>
+                    <tr>
+
+                        <td><strong><a href="?action=comments">Comments</strong></a></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><strong><a href="?action=question">Open questions</strong></a></td>
+                        <td>9</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong><a href="?action=news">FAQ News</strong></a></td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td><strong><a href="?action=user&user_action=listallusers">Users</strong></a></td>
+                        <td>7</td>
+
+                    </tr>
+                    </tbody>
+                </table>
+                </section>
+
+                <section>
+                    <header>
+                        <h3>Online version check</h3>
+                    </header>
+
+                    <p>
+
+                    <form action="index.php" method="post">
+                        <input type="hidden" name="param" value="version" />
+                        <input class="submit" type="submit" value="Get latest phpMyFAQ version number by web service" />
+                    </form>
+
+                    </p>
+                </section>
+
+                <section>
+
+                    <header>
+                        <h3>System Information</h3>
+                    </header>
+                    <table class="list" style="width: 750px;">
+                        <tbody>
+                        <tr>
+                            <td style="width: 150px;"><strong>phpMyFAQ Version</strong></td>
+                            <td>phpMyFAQ 2.8.0-dev</td>
+
+                        </tr>
+                        <tr>
+                            <td><strong>Server Software</strong></td>
+                            <td>Apache/2.2.21 (Unix) mod_ssl/2.2.21 OpenSSL/1.0.0g DAV/2 PHP/5.3.9</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PHP Version</strong></td>
+
+                            <td>PHP 5.3.9</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Register Globals</strong></td>
+                            <td>off</td>
+                        </tr>
+                        <tr>
+
+                            <td><strong>Safe Mode</strong></td>
+                            <td>off</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Open Basedir</strong></td>
+                            <td>off</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>DB Server</strong></td>
+                            <td>Mysqli</td>
+                        </tr>
+                        <tr>
+                            <td><strong>DB Client Version</strong></td>
+                            <td>mysqlnd 5.0.8-dev - 20102224 - $Revision: 321634 $</td>
+
+                        </tr>
+                        <tr>
+                            <td><strong>DB Server Version</strong></td>
+                            <td>5.1.61</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Webserver Interface</strong></td>
+
+                            <td>APACHE2HANDLER</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PHP Extensions</strong></td>
+                            <td>Core, date, ereg, libxml, pcre, zlib, bcmath, bz2, ctype, dom, fileinfo, filter, hash, json, SPL, PDO, apc, Reflection, session, SimpleXML, standard, tokenizer, xml, xmlreader, xmlwriter, mysqlnd, apache2handler, openssl, curl, gd, mysql, mysqli, pdo_mysql, Phar, SQLite, sqlite3, pdo_sqlite, mhash, xdebug</td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+
+                    <div style="font-size: 5px; text-align: right; color: #f5f5f5">NOTE: Art is resistance.</div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <form action="index.php" method="post" class="pull-right">
+                <select class="language" name="language" id="language" size="1" onchange="this.form.submit();">
+                    <option value="ar">Arabic</option>
+                    <option value="eu">Basque</option>
+                    <option value="bn">Bengali</option>
+                    <option value="pt-br">Brazilian Portuguese</option>
+                    <option value="zh">Chinese (Simplified)</option>
+                    <option value="tw">Chinese (Traditional)</option>
+                    <option value="cs">Czech</option>
+                    <option value="da">Danish</option>
+                    <option value="nl">Dutch</option>
+                    <option value="en" selected="selected">English</option>
+                    <option value="fi">Finnish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="el">Greek</option>
+                    <option value="he">Hebrew</option>
+                    <option value="hi">Hindi</option>
+                    <option value="hu">Hungarian</option>
+                    <option value="id">Indonesian</option>
+                    <option value="it">Italian</option>
+                    <option value="ja">Japanese</option>
+                    <option value="ko">Korean</option>
+                    <option value="lv">Latvian</option>
+                    <option value="lt">Lithuanian</option>
+                    <option value="ms">Malay</option>
+                    <option value="nb">Norwegian Bokm&aring;l</option>
+                    <option value="fa">Persian</option>
+                    <option value="pl">Polish</option>
+                    <option value="pt">Portuguese</option>
+                    <option value="ro">Romanian</option>
+                    <option value="ru">Russian</option>
+                    <option value="sr">Serbian</option>
+                    <option value="sk">Slovak</option>
+                    <option value="sl">Slovenian</option>
+                    <option value="es">Spanish</option>
+                    <option value="sv">Swedish</option>
+                    <option value="th">Thai</option>
+                    <option value="tr">Turkish</option>
+                    <option value="uk">Ukrainian</option>
+                    <option value="vi">Vietnamese</option>
+                    <option value="cy">Welsh</option>
+                </select>
+            </form>
+        </div>
+        <div class="row">
+            <p class="copyright pull-right">
+                Proudly powered by <strong>phpMyFAQ 2.8.0-dev</strong> |
+                <a href="http://www.phpmyfaq.de/documentation.php" target="_blank">phpMyFAQ documentation</a> |
+                Follow us on <a href="http://twitter.com/phpMyFAQ">Twitter</a> |
+                &copy; 2001-2012 <a href="http://www.phpmyfaq.de/" target="_blank">phpMyFAQ Team</a>
+
+            </p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
