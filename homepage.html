@@ -18,256 +18,253 @@
     <link rel="shortcut icon" href="http://www.phpmyfaq.de/favicon.ico">
     <link rel="apple-touch-icon" href="http://www.phpmyfaq.de/apple-touch-icon.png">
 
-    <link rel="stylesheet" href="http://www.phpmyfaq.de/css/style.css?v=2">
-    <script src="http://www.phpmyfaq.de/js/libs/modernizr-1.6.min.js"></script>
+    <!-- Share on Facebook -->
+    <meta property="og:title" content="phpMyFAQ Perdita -  powered by phpMyFAQ 2.8.0-dev" />
+    <meta property="og:description" content="phpMyFAQ should be the answer for all questions in life" />
+    <meta property="og:image" content="" />
+
+    <link rel="stylesheet" href="default/css/style.css?v=1">
 
 </head>
-
 <body>
-
-<a id="top"></a>
 
 <a href="http://github.com/thorsten/phpMyFAQ/">
     <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 999;"
          src="/images/forkme_right_orange_ff7600.png" alt="Fork me on GitHub" />
 </a>
 
-<header>
-    <h1>
-        <a title="phpMyFAQ" href="http://www.phpmyfaq.de/">
-            <img src="http://www.phpmyfaq.de/images/phpmyfaq.png" width="331" height="100" alt="phpMyFAQ: the FAQ system" />
-        </a>
-    </h1>
-</header>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="/">phpMyFAQ</a>
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                    <li><a href="/features.php">features</a></li>
+                    <li><a href="/download.php">downloads</a></li>
+                    <li><a href="/security.php">security</a></li>
+                    <li><a href="/documentation.php">documentation</a></li>
+                    <li><a href="/support.php">support</a></li>
+                    <li><a href="http://forum.phpmyfaq.de/">forums</a></li>
+                    <li><a href="http://devblog.phpmyfaq.de/">devblog</a></li>
+                    <li><a href="http://faq.phpmyfaq.de/">faq</a></li>
+                    <li><a href="/development.php">development</a></li>
+                </ul>
+            </div>
 
-<nav>
-    <ul>
-        <li><a href="/features.php">features</a></li>
-        <li><a href="/download.php">downloads</a></li>
-
-        <li><a href="/security.php">security</a></li>
-        <li><a href="/documentation.php">documentation</a></li>
-        <li><a href="/support.php">support</a></li>
-        <li><a href="http://forum.phpmyfaq.de/">forums</a></li>
-        <li><a href="http://devblog.phpmyfaq.de/">devblog</a></li>
-        <li><a href="http://faq.phpmyfaq.de/">faq</a></li>
-
-        <li><a href="/development.php">development</a></li>
-    </ul>
-</nav>
-<section id="intro">
-    <header>
-        <h2>What is phpMyFAQ?</h2>
-    </header>
-
-    <p>
-        phpMyFAQ is a scalable open source FAQ software using <a href="http://www.php.de/">PHP</a> and available for
-        many databases. For all features see the <a href="features.php">feature list</a>. We really think you will like
-        this knowledge base script.
-    </p>
-    <p>
-        Knowledge is free, and so is phpMyFAQ.
-    </p>
-</section>
-
-<div id="content">
-    <div id="mainContent">
-        <section>
-            <header>
-                <h2 class="news">phpMyFAQ news</h2>
-            </header>
-
-            <p>
-                <strong>2012-01-16</strong><br />
-
-                The phpMyFAQ Team is pleased to announce <a href="http://www.phpmyfaq.de/download.php">phpMyFAQ 2.7.3</a>,
-                the "Made in Germany" release. This release improves the PDF export and updates the Dutch translation.
-                We fixed some PostgreSQL and attachment related issues besides some minor bugs.
-            </p>
-            <p>
-                <strong>2012-01-04</strong><br />
-                We added a new <a href="http://www.phpmyfaq.de/news/">news section</a> on our page where you can find all
-                the news beginning from 2001 until today. Please note that some old news are written in German.
-            </p>
-            <p>
-
-                <strong>2011-12-31</strong><br />
-                The phpMyFAQ Team would like to announce the availability of <a href="http://www.phpmyfaq.de/download.php">phpMyFAQ 2.7.2</a>,
-                the "James Rizzi" release. This release improves the PDF export and the installation script for MySQL
-                users. We updated the Finnish, the French and the simplified Chinese translations. We also fixed some
-                bugs.<br />
-                phpMyFAQ 2.6 is now out of support, please update to the current 2.7 release as soon as possible.
-            </p>
-            <p>
-                <strong>2011-10-25</strong><br />
-                The phpMyFAQ Team is pleased to announce <a href="http://www.phpmyfaq.de/download.php">phpMyFAQ 2.7.1</a>,
-                the "Dennis Ritchie" release. This releases fixes a remote PHP code injection vulnerability, all users of affected
-                phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest versions! A detailed
-                <a href="http://www.phpmyfaq.de/advisory_2011-10-25.php">security advisory</a> is available. We also added
-                some missing translations, a configurable encryption type for passwords, support for anonymous login for
-                LDAP servers and a table of contents in PDF exports. We also fixed some minor bugs.<br/>
-
-                We also released the security release <a href="http://www.phpmyfaq.de/download.php">phpMyFAQ 2.6.19</a> for
-                the old 2.6 series.
-            </p>
-            <p>
-                <strong>2011-09-30</strong><br />
-                The phpMyFAQ Team would like to announce the availability of <a href="http://www.phpmyfaq.de/download.php">phpMyFAQ 2.7.0</a>,
-                the "James Dean" release. With this release we dropped the support of MySQL 4.1 and both Internet Explorer
-                version 6 and 7 due to our new HTML5/CSS3 powered layout. We added a configurable search relevance functionality,
-                automatic translations with Google Translate, Twitter and Facebook Like Button support. We also added an attachment
-                administration frontend, basic authentication support for LDAP groups, basic support for HTML5 microdata and
-                the functionality of the TinyMCE save button. Furthermore we introduced a basic reporting functionality,
-                IPv6 support, Single Sign On authentication, support for complete secured FAQ installations, an user configurable
-                date formatting and the possibility to delete user generated search terms. We really improved usability in
-                the whole frontend and administration backend and enabled Gzip compression. We also updated the bundled jQuery,
-                Modernizr, TinyMCE, SyntaxHighlighter and TCPDF libraries. Our users already updated the Dutch, German,
-                Japanese, Portuguese, Russian and Spanish translation.<br/>
-                phpMyFAQ 2.6 will be supported until the end of 2011.
-            </p>
-
-            <p>
-                <a href="news/">old news</a>
-            </p>
-
-        </section>
+        </div>
     </div>
-    <aside>
-        <section>
-
-            <header>
-                <h3>Free Download</h3>
-            </header>
-            <ul>
-                <li class="download">
-                    <a href="/download.php" title="click here to get phpMyFAQ 2.7.3">
-                        Download phpMyFAQ 2.7.3                    </a>
-                </li>
-
-                <li class="download">
-                    <a href="/download.php" title="click here to get phpMyFAQ 2.8.0-dev">
-                        Download phpMyFAQ 2.8.0-dev                    </a>
-                </li>
-                <li><a href="/changelog.php">Changelog</a></li>
-            </ul>
-        </section>
-        <section>
-
-            <header>
-                <h3>Resources</h3>
-            </header>
-            <ul>
-                <li><a href="/license.php">License</a></li>
-                <li><a href="/donations.php">Donation</a></li>
-                <li><a href="/references.php">Who uses phpMyFAQ?</a></li>
-
-                <li><a href="/10years.php">10 years phpMyFAQ</a></li>
-            </ul>
-        </section>
-        <section>
-            <div id="fbLikeBox">
-                <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FPhpMyFAQ%2F175338362498521&amp;width=300&amp;colorscheme=light&amp;show_faces=false&amp;stream=false&amp;header=false&amp;height=50"
-                        scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 300px; height: 50px;"
-                        allowTransparency="true"></iframe>
-            </div>
-            <div>
-
-                <a href="http://twitter.com/phpMyFAQ"
-                   class="twitter-follow-button">
-                    Follow @phpMyFAQ
-                </a>
-                <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
-            </div>
-            <div>
-                <link href="https://plus.google.com/112072864109762050099" rel="publisher" /><script type="text/javascript">
-                window.___gcfg = {lang: 'en-GB'};
-                (function()
-                {var po = document.createElement("script");
-                    po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
-                    var s = document.getElementsByTagName("script")[0];
-                    s.parentNode.insertBefore(po, s);
-                })();</script>
-                <div class="g-plus" data-href="https://plus.google.com/112072864109762050099" data-size="smallbadge"></div>
-
-            </div>
-            <div>
-                <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-                    {parsetags: 'explicit'}
-                </script>
-                <g:plusone size="medium"></g:plusone>
-                <script type="text/javascript">gapi.plusone.go();</script>
-            </div>
-        </section>
-        <section>
-
-            <header>
-                <h3>40+ Translations</h3>
-            </header>
-            <p>
-                Arabic, Basque, Bengali, Brazilian Portuguese, Chinese (Simplified), Chinese (Traditional), Czech,
-                Danish, Dutch, English, Finnish, French, German, Greek, Hebrew, Hindi, Hungarian, Indonesian, Italian,
-                Japanese, Korean, Latvian, Lithuanian, Malay, Norwegian (Bokmål), Persian (Farsi), Polish, Portuguese,
-                Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, Thai, Turkish, Ukrainian, Vietnamese,
-                Welsh
-            </p>
-        </section>
-
-    </aside>
 </div>
 
-<footer>
-    <div>
-        <section id="about">
-            <h3>about</h3>
-            <p>
-                phpMyFAQ is a multilingual, completely database-driven FAQ-system. It supports various databases to
-                store all data, PHP 5.2 (or higher) is needed in order to access this data. phpMyFAQ also offers a
-                multi-language Content Management-System with a WYSIWYG editor and an Image Manager, flexible multi-user
-                support with user and group based permissions on categories and records, a wiki-like revision feature,
-                a news system, user-tracking, language modules, enhanced automatic content negotiation, templates,
-                PDF-support, a backup-system, a dynamic sitemap, related articles, tagging, RSS feeds, built-in spam
-                protection systems, Facebook and Twitter support, LDAP and Microsoft Active Directory support and an
-                easy to use installation script.
-            </p>
 
-        </section>
-        <section id="tweets">
-            <h3>recent tweets</h3>
-            <script src="http://widgets.twimg.com/j/2/widget.js"></script>
-            <script>
-                new TWTR.Widget({
-                    version: 2, type: 'profile', rpp: 4, interval: 6000, width: 295, height: 300,
-                    theme: { shell: { background: '#222', color: '#777' },
-                        tweets: { background: '#222', color: '#777', links: '#999' } },
-                    features: { scrollbar: false, loop: false, live: false, hashtags: true,
-                        timestamp: true, avatars: false, behavior: 'all' }
-                }).render().setUser('phpMyFAQ').start();
-            </script>
-        </section>
-        <section id="blogroll">
+<div id="main">
+    <div class="container">
+        <div class="row">
+            <div class="hero-unit hello-phpmyfaq">
+                <h1>What is phpMyFAQ?</h1>
+                <p>
+                    phpMyFAQ is a scalable open source FAQ software using <a href="http://www.php.de/">PHP</a> and available for
+                    many databases. For all features see the <a href="features.php">feature list</a>. We really think you will like
+                    this knowledge base script.
+                </p>
+                <p>
+                    Knowledge is free, and so is phpMyFAQ.
+                </p>
+            </div>
+        </div>
+        <div class="row">
 
-            <h3>misc</h3>
-            <ul>
-                <li><a href="/team.php">development team</a></li>
-                <li><a href="/danke.php">thank you!</a></li>
-                <li><a href="http://www.amazon.de/exec/obidos/registry/UQQJEX7BCHPZ/">thorsten's wishlist</a></li>
-                <li><a href="/imprint.php">imprint</a></li>
-            </ul>
+            <section class="span9">
+                <header>
+                    <h2 class="news">phpMyFAQ news</h2>
+                </header>
 
-            <a href="http://www.jetbrains.com/phpstorm/" style="position: relative;display:block; width:230px; height:33px; border:0; margin:0;padding:0;text-decoration:none;text-indent:0;">
+                <p>
+                    <strong>2012-01-16</strong><br />
+                    The phpMyFAQ Team is pleased to announce <a href="http://www.phpmyfaq.de/download.php">phpMyFAQ 2.7.3</a>,
+                    the "Made in Germany" release. This release improves the PDF export and updates the Dutch translation.
+                    We fixed some PostgreSQL and attachment related issues besides some minor bugs.
+                </p>
+                <p>
+                    <strong>2012-01-04</strong><br />
+                    We added a new <a href="http://www.phpmyfaq.de/news/">news section</a> on our page where you can find all
+                    the news beginning from 2001 until today. Please note that some old news are written in German.
+                </p>
+                <p>
+                    <strong>2011-12-31</strong><br />
+                    The phpMyFAQ Team would like to announce the availability of <a href="http://www.phpmyfaq.de/download.php">phpMyFAQ 2.7.2</a>,
+                    the "James Rizzi" release. This release improves the PDF export and the installation script for MySQL
+                    users. We updated the Finnish, the French and the simplified Chinese translations. We also fixed some
+                    bugs.<br />
+                    phpMyFAQ 2.6 is now out of support, please update to the current 2.7 release as soon as possible.
+                </p>
+                <p>
+                    <strong>2011-10-25</strong><br />
+                    The phpMyFAQ Team is pleased to announce <a href="http://www.phpmyfaq.de/download.php">phpMyFAQ 2.7.1</a>,
+                    the "Dennis Ritchie" release. This releases fixes a remote PHP code injection vulnerability, all users of affected
+                    phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest versions! A detailed
+                    <a href="http://www.phpmyfaq.de/advisory_2011-10-25.php">security advisory</a> is available. We also added
+                    some missing translations, a configurable encryption type for passwords, support for anonymous login for
+                    LDAP servers and a table of contents in PDF exports. We also fixed some minor bugs.<br/>
+                    We also released the security release <a href="http://www.phpmyfaq.de/download.php">phpMyFAQ 2.6.19</a> for
+                    the old 2.6 series.
+                </p>
+                <p>
+                    <strong>2011-09-30</strong><br />
+                    The phpMyFAQ Team would like to announce the availability of <a href="http://www.phpmyfaq.de/download.php">phpMyFAQ 2.7.0</a>,
+                    the "James Dean" release. With this release we dropped the support of MySQL 4.1 and both Internet Explorer
+                    version 6 and 7 due to our new HTML5/CSS3 powered layout. We added a configurable search relevance functionality,
+                    automatic translations with Google Translate, Twitter and Facebook Like Button support. We also added an attachment
+                    administration frontend, basic authentication support for LDAP groups, basic support for HTML5 microdata and
+                    the functionality of the TinyMCE save button. Furthermore we introduced a basic reporting functionality,
+                    IPv6 support, Single Sign On authentication, support for complete secured FAQ installations, an user configurable
+                    date formatting and the possibility to delete user generated search terms. We really improved usability in
+                    the whole frontend and administration backend and enabled Gzip compression. We also updated the bundled jQuery,
+                    Modernizr, TinyMCE, SyntaxHighlighter and TCPDF libraries. Our users already updated the Dutch, German,
+                    Japanese, Portuguese, Russian and Spanish translation.<br/>
+                    phpMyFAQ 2.6 will be supported until the end of 2011.
+                </p>
+                <p>
+                    <a href="news/">old news</a>
+                </p>
+            </section>
+            <aside class="span3">
+                <section>
+                    <header>
+                        <h3>Free Download</h3>
+                    </header>
+                    <ul>
+                        <li class="download">
+                            <a href="/download.php" title="click here to get phpMyFAQ 2.7.3">
+                                Download phpMyFAQ 2.7.3                    </a>
+                        </li>
+
+                        <li class="download">
+                            <a href="/download.php" title="click here to get phpMyFAQ 2.8.0-dev">
+                                Download phpMyFAQ 2.8.0-dev                    </a>
+                        </li>
+                        <li><a href="/changelog.php">Changelog</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <header>
+                        <h3>Resources</h3>
+                    </header>
+                    <ul>
+                        <li><a href="/license.php">License</a></li>
+                        <li><a href="/donations.php">Donation</a></li>
+                        <li><a href="/references.php">Who uses phpMyFAQ?</a></li>
+
+                        <li><a href="/10years.php">10 years phpMyFAQ</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <div id="fbLikeBox">
+                        <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FPhpMyFAQ%2F175338362498521&amp;width=300&amp;colorscheme=light&amp;show_faces=false&amp;stream=false&amp;header=false&amp;height=50"
+                                scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 300px; height: 50px;"
+                                allowTransparency="true"></iframe>
+                    </div>
+                    <div>
+                        <a href="http://twitter.com/phpMyFAQ"
+                           class="twitter-follow-button">
+                            Follow @phpMyFAQ
+                        </a>
+                        <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+                    </div>
+                    <div>
+                        <link href="https://plus.google.com/112072864109762050099" rel="publisher" /><script type="text/javascript">
+                        window.___gcfg = {lang: 'en-GB'};
+                        (function()
+                        {var po = document.createElement("script");
+                            po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
+                            var s = document.getElementsByTagName("script")[0];
+                            s.parentNode.insertBefore(po, s);
+                        })();</script>
+                        <div class="g-plus" data-href="https://plus.google.com/112072864109762050099" data-size="smallbadge"></div>
+
+                    </div>
+                    <div>
+                        <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+                            {parsetags: 'explicit'}
+                        </script>
+                        <g:plusone size="medium"></g:plusone>
+                        <script type="text/javascript">gapi.plusone.go();</script>
+                    </div>
+                </section>
+                <section>
+                    <header>
+                        <h3>40+ Translations</h3>
+                    </header>
+                    <p>
+                        Arabic, Basque, Bengali, Brazilian Portuguese, Chinese (Simplified), Chinese (Traditional), Czech,
+                        Danish, Dutch, English, Finnish, French, German, Greek, Hebrew, Hindi, Hungarian, Indonesian, Italian,
+                        Japanese, Korean, Latvian, Lithuanian, Malay, Norwegian (Bokmål), Persian (Farsi), Polish, Portuguese,
+                        Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, Thai, Turkish, Ukrainian, Vietnamese,
+                        Welsh
+                    </p>
+                </section>
+            </aside>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <section class="span4">
+                <h3>about</h3>
+                <p>
+                    phpMyFAQ is a multilingual, completely database-driven FAQ-system. It supports various databases to
+                    store all data, PHP 5.2 (or higher) is needed in order to access this data. phpMyFAQ also offers a
+                    multi-language Content Management-System with a WYSIWYG editor and an Image Manager, flexible multi-user
+                    support with user and group based permissions on categories and records, a wiki-like revision feature,
+                    a news system, user-tracking, language modules, enhanced automatic content negotiation, templates,
+                    PDF-support, a backup-system, a dynamic sitemap, related articles, tagging, RSS feeds, built-in spam
+                    protection systems, Facebook and Twitter support, LDAP and Microsoft Active Directory support and an
+                    easy to use installation script.
+                </p>
+            </section>
+            <section class="span4">
+                <h3>recent tweets</h3>
+                <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+                <script>
+                    new TWTR.Widget({
+                        version: 2, type: 'profile', rpp: 4, interval: 6000, width: 295, height: 300,
+                        theme: { shell: { background: '#222', color: '#777' },
+                            tweets: { background: '#222', color: '#777', links: '#999' } },
+                        features: { scrollbar: false, loop: false, live: false, hashtags: true,
+                            timestamp: true, avatars: false, behavior: 'all' }
+                    }).render().setUser('phpMyFAQ').start();
+                </script>
+            </section>
+            <section class="span4">
+                <h3>misc</h3>
+                <ul>
+                    <li><a href="/team.php">development team</a></li>
+                    <li><a href="/danke.php">thank you!</a></li>
+                    <li><a href="http://www.amazon.de/exec/obidos/registry/UQQJEX7BCHPZ/">thorsten's wishlist</a></li>
+                    <li><a href="/imprint.php">imprint</a></li>
+                </ul>
+                <a href="http://www.jetbrains.com/phpstorm/" style="position: relative;display:block; width:230px; height:33px; border:0; margin:0;padding:0;text-decoration:none;text-indent:0;">
                 <span style="margin: 0;padding: 0;position: absolute;top: 10px;left:3px;font-size: 11px;cursor:pointer;  background-image:none;border:0;color: #fff;font-family: trebuchet ms,arial,sans-serif;font-weight: normal;text-align:left;">
                     Developed with
                 </span>
-                <img src="http://www.jetbrains.com/phpstorm/documentation/phpstorm_banners/phpstorm1/phpstorm230x33_violet.gif" alt="Developed with" border="0"/>
-            </a>
-
-        </section>
-
+                    <img src="http://www.jetbrains.com/phpstorm/documentation/phpstorm_banners/phpstorm1/phpstorm230x33_violet.gif" alt="Developed with" border="0"/>
+                </a>
+            </section>
+        </div>
+        <div class="row">
+            <p class="pull-right">
+                &copy; 2001 - 2012 <a href="http://www.phpmyfaq.de/imprint.php">phpMyFAQ Team</a> |
+                Last update: 2012-01-16
+            </p>
+        </div>
     </div>
-    <p id="copyright">
-        &copy; 2001 - 2012 <a href="http://www.phpmyfaq.de/imprint.php">phpMyFAQ Team</a> |
-        Last update: 2012-01-16    </p>
-</footer>
+</div>
 
 </body>
 </html>
