@@ -1,0 +1,52 @@
+<project name="phpMyFAQ" default="build" basedir=".">
+ <target name="clean">
+  <!-- Clean up -->
+  <delete dir="${basedir}/build"/>
+
+  <!-- Create build directories -->
+  <mkdir dir="${basedir}/build/api"/>
+  <mkdir dir="${basedir}/build/code-browser"/>
+  <mkdir dir="${basedir}/build/coverage"/>
+  <mkdir dir="${basedir}/build/logs"/>
+  <mkdir dir="${basedir}/build/pdepend"/>
+ </target>
+
+ <target name="sync" description="Updates all git submodules">
+  <exec executable="git">
+   <arg value="pull"/>
+   <arg value="origin"/>
+   <arg value="master"/>
+  </exec>
+  <exec executable="git">
+   <arg value="submodule"/>
+   <arg value="init"/>
+  </exec>
+  <exec executable="git">
+   <arg value="submodule"/>
+   <arg value="sync"/>
+  </exec>
+  <exec executable="git">
+   <arg value="submodule"/>
+   <arg value="update"/>
+  </exec>
+ </target>
+
+ <target name="mergejs" description="Merges all JavaScript files into one file">
+     <concat destfile="${basedir}/js/phpmyfaq.js" force="yes">
+         <filelist dir="${basedir}/vendor/bootstrap/js" files="bootstrap-transition.js" />
+         <filelist dir="${basedir}/vendor/bootstrap/js" files="bootstrap-alert.js" />
+         <filelist dir="${basedir}/vendor/bootstrap/js" files="bootstrap-button.js" />
+         <filelist dir="${basedir}/vendor/bootstrap/js" files="bootstrap-carousel.js" />
+         <filelist dir="${basedir}/vendor/bootstrap/js" files="bootstrap-collapse.js" />
+         <filelist dir="${basedir}/vendor/bootstrap/js" files="bootstrap-dropdown.js" />
+         <filelist dir="${basedir}/vendor/bootstrap/js" files="bootstrap-modal.js" />
+         <filelist dir="${basedir}/vendor/bootstrap/js" files="bootstrap-tooltip.js" />
+         <filelist dir="${basedir}/vendor/bootstrap/js" files="bootstrap-popover.js" />
+         <filelist dir="${basedir}/vendor/bootstrap/js" files="bootstrap-scrollspy.js" />
+         <filelist dir="${basedir}/vendor/bootstrap/js" files="bootstrap-tab.js" />
+         <filelist dir="${basedir}/vendor/bootstrap/js" files="bootstrap-typeahead.js" />
+     </concat>
+ </target>
+
+ <target name="build" depends="clean,sync,mergejs"/>
+</project>
