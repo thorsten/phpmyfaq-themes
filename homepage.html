@@ -20,8 +20,9 @@
     <link rel="apple-touch-icon" href="http://www.phpmyfaq.de/apple-touch-icon.png">
 
     <!-- Share on Facebook -->
-    <meta property="og:title" content="phpMyFAQ Perdita -  powered by phpMyFAQ 2.8.0-dev" />
-    <meta property="og:description" content="phpMyFAQ should be the answer for all questions in life" />
+    <meta property="og:title" content="phpMyFAQ - The FAQ system" />
+    <meta property="og:description" content="phpMyFAQ is a multilingual, completely database-driven FAQ system. The script
+        supports various databases to store all data, PHP 5.2 (or higher) is needed in order to access the FAQs." />
     <meta property="og:image" content="" />
 
     <link rel="stylesheet" href="default/css/style.css?v=1">
@@ -31,55 +32,45 @@
 
 <a href="http://github.com/thorsten/phpMyFAQ/">
     <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 999;"
-         src="/images/forkme_right_orange_ff7600.png" alt="Fork me on GitHub" />
+         src="http://phpmyfaq.de/images/forkme_right_orange_ff7600.png" alt="Fork me on GitHub" />
 </a>
 
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="/">phpMyFAQ</a>
-            <div class="nav-collapse">
-                <ul class="nav pull-right">
-                    <li><a href="/features.php">features</a></li>
-                    <li><a href="/download.php">downloads</a></li>
-                    <li><a href="/security.php">security</a></li>
-                    <li><a href="/documentation.php">documentation</a></li>
-                    <li><a href="/support.php">support</a></li>
-                    <li><a href="http://forum.phpmyfaq.de/">forums</a></li>
-                    <li><a href="http://devblog.phpmyfaq.de/">devblog</a></li>
-                    <li><a href="http://faq.phpmyfaq.de/">faq</a></li>
-                    <li><a href="/development.php">development</a></li>
-                </ul>
-            </div>
-
-        </div>
+<!-- Header -->
+<header class="container header">
+    <div class="row">
+      <div class="phpmyfaq-logo">
+          <a href="/"><img id="phpmyfaq-logo" src="img/logo.png" width="300" height="100" alt="phpMyFAQ"></a>
+      </div>
+      <nav class="phpmyfaq-navigation">
+        <ul class="nav nav-pills header-nav">
+            <li><a href="/features.php">features</a></li>
+            <li><a href="/download.php">downloads</a></li>
+            <li><a href="/security.php">security</a></li>
+            <li><a href="/documentation.php">documentation</a></li>
+            <li><a href="/support.php">support</a></li>
+            <li><a href="/development.php">development</a></li>
+        </ul>
+      </nav>
     </div>
-</div>
-
+</header>
+<!-- /Header -->
 
 <div id="main">
     <div class="container">
-        <div class="row">
+        <div class="row main-content">
             <div class="hero-unit hello-phpmyfaq">
                 <h1>What is phpMyFAQ?</h1>
                 <p>
-                    phpMyFAQ is a scalable open source FAQ software using <a href="http://www.php.de/">PHP</a> and available for
-                    many databases. For all features see the <a href="features.php">feature list</a>. We really think you will like
-                    this knowledge base script.
+                    <strong>phpMyFAQ</strong> is a scalable open source FAQ software using <a href="http://www.php.de/">PHP</a>
+                    and available for many databases. For all features see the <a href="features.php">feature list</a>.
+                    We really think you will like this knowledge base script.
                 </p>
                 <p>
                     Knowledge is free, and so is phpMyFAQ.
                 </p>
             </div>
-        </div>
-        <div class="row">
 
-            <section class="span8">
+            <section class="phpmyfaq-main-section">
                 <header>
                     <h2 class="news">phpMyFAQ news</h2>
                 </header>
@@ -133,7 +124,7 @@
                     <a href="news/">old news</a>
                 </p>
             </section>
-            <aside class="span4">
+            <aside class="phpmyfaq-side-section">
                 <section>
                     <header>
                         <h3>Free Download</h3>
@@ -159,7 +150,6 @@
                         <li><a href="/license.php">License</a></li>
                         <li><a href="/donations.php">Donation</a></li>
                         <li><a href="/references.php">Who uses phpMyFAQ?</a></li>
-
                         <li><a href="/10years.php">10 years phpMyFAQ</a></li>
                     </ul>
                 </section>
@@ -213,10 +203,10 @@
     </div>
 </div>
 
-<div id="footer">
+<footer id="footer">
     <div class="container">
         <div class="row">
-            <section class="span4">
+            <section class="phpmyfaq-footer-about">
                 <h3>about</h3>
                 <p>
                     phpMyFAQ is a multilingual, completely database-driven FAQ-system. It supports various databases to
@@ -229,20 +219,20 @@
                     easy to use installation script.
                 </p>
             </section>
-            <section class="span4">
+            <section class="phpmyfaq-footer-tweets">
                 <h3>recent tweets</h3>
                 <script src="http://widgets.twimg.com/j/2/widget.js"></script>
                 <script>
                     new TWTR.Widget({
                         version: 2, type: 'profile', rpp: 4, interval: 6000, width: 295, height: 300,
-                        theme: { shell: { background: '#222', color: '#777' },
-                            tweets: { background: '#222', color: '#777', links: '#999' } },
+                        theme: { shell: { background: '#222', color: '#fff' },
+                            tweets: { background: '#222', color: '#fff', links: '#f27b4e' } },
                         features: { scrollbar: false, loop: false, live: false, hashtags: true,
                             timestamp: true, avatars: false, behavior: 'all' }
                     }).render().setUser('phpMyFAQ').start();
                 </script>
             </section>
-            <section class="span4">
+            <section class="phpmyfaq-footer-misc">
                 <h3>misc</h3>
                 <ul>
                     <li><a href="/team.php">development team</a></li>
@@ -265,7 +255,7 @@
             </p>
         </div>
     </div>
-</div>
+</footer>
 
 </body>
 </html>
