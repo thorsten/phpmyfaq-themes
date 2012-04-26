@@ -4228,9 +4228,6 @@ a {
 .header-nav {
   padding: 30px 0px;
 }
-.nav-pills a {
-  text-decoration: underline;
-}
 .nav-pills .active > a,
 .nav-pills .active > a:hover {
   color: #ffffff;
