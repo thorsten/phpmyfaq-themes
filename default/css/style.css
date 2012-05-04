@@ -4225,11 +4225,12 @@ a {
   margin-left: 20px;
   width: 620px;
 }
-.header-nav {
+.header .phpmyfaq-navigation .header-nav {
   padding: 30px 0px;
 }
-.nav-pills .active > a,
-.nav-pills .active > a:hover {
+.header .phpmyfaq-navigation .nav-pills .active > a,
+.header .phpmyfaq-navigation .nav-pills .active > a:hover,
+.header .phpmyfaq-navigation .nav-pills .active {
   color: #ffffff;
   background-color: #f27b4e;
 }
